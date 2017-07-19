@@ -2,7 +2,7 @@
 
 # Check args
 if [ "$#" -ne 1 ]; then
-  echo "Error! Usage: ./build.sh IMAGE_NAME"
+  echo "Error! Usage should be: ./run.sh IMAGE_NAME"
   exit
 fi
 
