@@ -1,7 +1,7 @@
 # ROS-Development-Docker
 A container for ROS developers
 
-This container is inspired by [rosdocked](). However, I have lots of issues running that container. The main issue is caused by the lack of OpenGL support in the container that I couldn't run any GUI apps apart from Xapps. Because of this , Qt creator and Rviz could not run. These issues are finally solved in this container. One personal preference I added in this container is that I enable the automatic clang format in Qt Creator and set the style to Google style. The last section shows how to 
+This container is inspired by [rosdocked](https://github.com/jbohren/rosdocked). However, I have lots of issues running that container. The main issue is caused by the lack of OpenGL support in the container that I couldn't run any GUI apps apart from Xapps. Because of this , Qt creator and Rviz could not run. These issues are finally solved in this container. One personal preference I added in this container is that I enable the automatic clang format in Qt Creator and set the style to Google style. The last section shows how to 
 
 ## What comes in the container
 - Ubuntu 14.04
@@ -23,9 +23,7 @@ cd docker
 ```
 ./run_docker.sh [Image_name]
 ```
-It mounts the current directory into the *sr/* folder.
-
-To run the Qt Creator:
+It mounts the current directory into the *sr/* folder. To run the Qt Creator:
 ```
 qtcreator
 ```
