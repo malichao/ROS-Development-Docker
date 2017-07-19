@@ -28,6 +28,11 @@ It mounts the current directory into the *sr/* folder. To run the Qt Creator:
 qtcreator
 ```
 
+To open a new terminal inside the container:
+```
+./new_docker_terminal.sh [Image_name]
+```
+
 ## How to customize Qt Creator
 1. Lauch Qt Creator `qtcreator`
 1. Configure Qt Creator as you want
