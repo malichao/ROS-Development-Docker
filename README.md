@@ -13,7 +13,12 @@ This container is inspired by [rosdocked](https://github.com/jbohren/rosdocked).
 - clang formt 3.9
 - Python 2.7
 
+## Dependencies
+- [Nvidia docker](https://github.com/NVIDIA/nvidia-docker)
+
 ## How to build
+This step is not necessary if you use the docker image on my Docker Hub.
+
 ```
 cd docker
 ./build.sh [Image_name]
@@ -23,6 +28,11 @@ cd docker
 ```
 ./run_docker.sh [Image_name]
 ```
+To run the built image on my Docker Hub:
+```
+./run_docker.sh malichao/ros_indigo_dev
+```
+
 It mounts the current directory into the *sr/* folder. To run the Qt Creator:
 ```
 qtcreator
