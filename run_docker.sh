@@ -8,7 +8,7 @@ fi
 
 xhost +
 
-sudo nvidia-docker run\
+sudo docker run\
   --net=host\
   -e SHELL\
   -e DISPLAY=unix:0.0\

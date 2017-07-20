@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # Check args
-if [ "$#" -ne 1 ]; then
-  echo "Error! Usage: ./build.sh IMAGE_NAME"
+if [ "$#" -ne 2 ]; then
+  echo "Error! Usage: ./build.sh Dockerfile_Name Image_Name"
   exit
 fi
 
@@ -14,4 +14,4 @@ sudo docker build \
   --build-arg gid=$group_id\
   --build-arg home=$HOME\
   --build-arg shell=$SHELL\
-  -t $1 .
+  --rm -f $1 -t $2 .

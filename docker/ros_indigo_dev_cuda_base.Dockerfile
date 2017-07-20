@@ -44,17 +44,3 @@ RUN add-apt-repository -y ppa:beineri/opt-qt571-trusty && apt-get -y update &&\
 		add-apt-repository -y ppa:levi-armstrong/ppa  &&\
 		apt-get update && apt-get install -y qt57creator-plugin-ros &&\
 		ln -s /opt/qt57/bin/qtcreator /usr/local/bin/qtcreator
-
-# Copy Qt creator settings to avoid crash due to loading Welcome window
-COPY QtProject /home/${user}/.config/QtProject
-RUN chown ${uid}:${gid} -R /home/${user}/.config
-
-RUN mkdir -p /home/${user} && \
-    echo "${user}:x:${uid}:${gid}:${user},,,:/home/${user}:/bin/bash" >> /etc/passwd && \
-    echo "${user}:x:${uid}:" >> /etc/group && \
-    echo "${user} ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/${user} && \
-    chmod 0440 /etc/sudoers.d/${user} && \
-    chown ${uid}:${gid} -R /home/${user}
-
-USER ${user}
-ENV HOME /home/${user}
