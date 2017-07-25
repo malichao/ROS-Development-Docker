@@ -44,3 +44,6 @@ RUN add-apt-repository -y ppa:beineri/opt-qt571-trusty && apt-get -y update &&\
 		add-apt-repository -y ppa:levi-armstrong/ppa  &&\
 		apt-get update && apt-get install -y qt57creator-plugin-ros &&\
 		ln -s /opt/qt57/bin/qtcreator /usr/local/bin/qtcreator
+
+# Install gedit 
+RUN apt-get install -y gedit
